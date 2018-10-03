@@ -19,6 +19,7 @@ var app = app || {};
 		events: {
 			'click .toggle': 'toggleCompleted',
 			'click .edit-btn': 'edit',
+			'click .priority-btn': '',
 			'dblclick label': 'edit',
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
@@ -68,6 +69,11 @@ var app = app || {};
 
 		// Toggle the `"completed"` state of the model.
 		toggleCompleted: function () {
+			this.model.toggle();
+		},
+
+		// Toggle the `"priority"` state of the model.
+		togglePriority: function () {
 			this.model.toggle();
 		},
 
